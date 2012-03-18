@@ -1,5 +1,5 @@
 # Call the common thunderc stuff first to avoid a lot of duplication.
-$(call inherit-product, device/lge/thunderc_common/thunderc.mk)
+$(call inherit-product, device/lge/thunderc_common/thunderc_common.mk)
 
 DEVICE_PACKAGE_OVERLAYS += device/lge/thunderc_VM670/overlay
 
