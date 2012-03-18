@@ -1,4 +1,7 @@
-DEVICE_PACKAGE_OVERLAYS += device/lge/thunderc_VM670/overlay/common
+# Call the common thunderc stuff first to avoid a lot of duplication.
+$(call inherit-product, device/lge/thunderc_common/thunderc.mk)
+
+DEVICE_PACKAGE_OVERLAYS += device/lge/thunderc_VM670/overlay
 
 PRODUCT_NAME := full_thunderc_VM670
 PRODUCT_DEVICE := thunderc_VM670
@@ -9,11 +12,11 @@ PRODUCT_COPY_FILES += \
 
 # Backlight
 PRODUCT_COPY_FILES += \
-    vendor/lge/thunderc_VM670/proprietary/system/lib/hw/lights.thunderc.so:system/lib/hw/lights.thunderc.so \
+    vendor/lge/thunderc/proprietary/VM670/system/lib/hw/lights.thunderc.so:system/lib/hw/lights.thunderc.so \
 
 # Keylayouts
 PRODUCT_COPY_FILES += \
-    vendor/lge/thunderc_VM670/proprietary/system/usr/keychars/thunder_keypad.kcm.bin:system/usr/keychars/thunder_keypad.kcm.bin \
+    vendor/lge/thunderc/proprietary/VM670/system/usr/keychars/thunder_keypad.kcm.bin:system/usr/keychars/thunder_keypad.kcm.bin \
 
 # Locate vendor bootimage files if present
 # Because these are carrier specific, I've left the default to no logo.
@@ -53,7 +56,7 @@ PRODUCT_COPY_FILES += \
     vendor/lge/thunderc/proprietary/VM670/system/lib/hw/copybit.thunderc.so:system/lib/hw/copybit.thunderc.so \
 
 # Sensors
-PRODUCT_COPY_FILES += \   
+PRODUCT_COPY_FILES += \
     vendor/lge/thunderc/proprietary/VM670/system/lib/hw/sensors.thunderc.so:system/lib/hw/sensors.thunderc.so \
     vendor/lge/thunderc/proprietary/VM670/system/bin/ami304d:system/bin/ami304d \
 
@@ -87,7 +90,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/lge/thunderc_VM670/files/kernel/wireless.ko:system/lib/modules/wireless.ko \
     device/lge/thunderc_VM670/files/kernel/tun.ko:system/lib/modules/tun.ko \
-    vendor/lge/thunderc/proprietary/VM670/system/etc/wl/nvram.txt:system/etc/wl/nvram.txt \ 
+    vendor/lge/thunderc/proprietary/VM670/system/etc/wl/nvram.txt:system/etc/wl/nvram.txt \
     vendor/lge/thunderc/proprietary/VM670/system/etc/wl/rtecdc.bin:system/etc/wl/rtecdc.bin \
     vendor/lge/thunderc/proprietary/VM670/system/etc/wl/rtecdc-apsta.bin:system/etc/wl/rtecdc-apsta.bin \
     vendor/lge/thunderc/proprietary/VM670/system/etc/wl/rtecdc-mfgtest.bin:system/etc/wl/rtecdc-mfgtest.bin
@@ -160,4 +163,3 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/lge/thunderc/proprietary/VM670/system/bin/$(BLUETOOTH_FIRMWARE):system/bin/BCM4325.hcd
 
-$(call inherit-product, device/lge/thunderc_common/thunderc.mk)
