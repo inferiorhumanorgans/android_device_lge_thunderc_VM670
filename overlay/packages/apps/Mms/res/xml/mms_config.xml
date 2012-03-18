@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mms_config version="4">
+    <bool name="enabledMMS">true</bool>
+    <int name="maxMessageSize">524288</int>
+    <int name="maxImageHeight">960</int>
+    <int name="maxImageWidth">1280</int>
+    <int name="defaultSMSMessagesPerThread">200</int>
+    <int name="defaultMMSMessagesPerThread">20</int>
+    <int name="minMessageCountPerThread">2</int>
+    <int name="maxMessageCountPerThread">5000</int>
+    <bool name="enabledTransID">true</bool>
+    <int name="recipientLimit">40</int>
+    <int name="smsToMmsTextThreshold">4</int>
+    <string name="uaProfTagName">Profile</string>
+    <string name="userAgent">LGE-VM670/Android-mms\u0020</string>
+    <string name="uaProfUrl">http://uaprof.vmobl.com/lg/vm670/1.0/VMU_VM670_UAProf.xml</string>
+</mms_config>
