@@ -20,4 +20,7 @@
 # In particular, you can add lunch options with the add_lunch_combo
 # function: add_lunch_combo generic-eng
 
+
+# Note userdebug doesn't quite seem to work, yet.
+add_lunch_combo cyanogen_thunderc_VM670-eng
 add_lunch_combo cyanogen_thunderc_VM670-userdebug
