@@ -1,4 +1,5 @@
 # Copyright (C) 2011-2012 Inferior Human Organs Software
+#                         Alex Zepeda <alex@inferiorhumanorgans.com>
 #                         Jerry Jasuta
 #                         Tom Marshall
 # 
