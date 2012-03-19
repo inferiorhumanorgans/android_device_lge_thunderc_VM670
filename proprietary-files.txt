@@ -1,0 +1,4 @@
+lib/libOmxAmrwbDec.so
+lib/libOmxQcelpDec.so
+lib/liblgerft.so
+bin/BCM4325D1_004.002.004.0218.0248.hcd
